@@ -1,0 +1,12 @@
+services:
+  glpi:
+    image: gstrtoint/glpi_isofttec:1.0
+    container_name: glpi
+    restart: always
+    hostname: glpi
+    ports:
+      - "8000:80"
+    volumes:
+      - "/opt/docker/glpi:/var/www/html/glpi"
+    environment:
+      TZ: "America/Sao_Paulo"
